@@ -1,4 +1,3 @@
-// Update imports for Material-UI 5.x
 import React, { useState } from 'react';
 import { Button, Container, Typography, Modal, Box, TextField } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -117,4 +116,3 @@ const ReferAndEarnLandingPage = () => {
 };
 
 export default ReferAndEarnLandingPage;
-
