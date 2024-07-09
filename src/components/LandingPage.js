@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
 import { Button, Container, Typography, Modal, Box, TextField } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { css } from '@emotion/react';
 
-const useStyles = makeStyles((theme) => ({
-  heroSection: {
-    textAlign: 'center',
-    padding: theme.spacing(8, 2),
-    backgroundColor: '#f5f5f5',
-  },
-  modalStyle: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(4),
-  },
-}));
+const heroSection = css`
+  text-align: center;
+  padding: 64px 16px;
+  background-color: #f5f5f5;
+`;
+
+const modalStyle = css`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  box-shadow: 24px;
+  padding: 32px;
+`;
 
 const ReferAndEarnLandingPage = () => {
-  const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({
     referrerName: '',
@@ -50,7 +48,7 @@ const ReferAndEarnLandingPage = () => {
 
   return (
     <Container>
-      <div className={classes.heroSection}>
+      <div css={heroSection}>
         <Typography variant="h3" gutterBottom>
           Refer & Earn
         </Typography>
@@ -62,7 +60,7 @@ const ReferAndEarnLandingPage = () => {
         </Button>
       </div>
       <Modal open={open} onClose={handleClose}>
-        <Box className={classes.modalStyle}>
+        <Box css={modalStyle}>
           <Typography variant="h6" gutterBottom>
             Refer a Course
           </Typography>
