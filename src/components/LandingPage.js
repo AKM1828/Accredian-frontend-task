@@ -1,7 +1,7 @@
-// src/components/ReferAndEarnLandingPage.js
+// Update imports for Material-UI 5.x
 import React, { useState } from 'react';
-import { Button, Container, Typography, Modal, Box, TextField } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Button, Container, Typography, Modal, Box, TextField } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   heroSection: {
@@ -117,3 +117,4 @@ const ReferAndEarnLandingPage = () => {
 };
 
 export default ReferAndEarnLandingPage;
+
