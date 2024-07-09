@@ -3,21 +3,20 @@ import { Button, Container, Typography, Modal, Box, TextField } from '@mui/mater
 import { css } from '@emotion/react';
 
 const heroSection = css`
-  text-align: center;
-  padding: 64px 16px;
-  background-color: #f5f5f5;
+  text-align: right;
+  padding: 80px 16px;
+  background-color: #f6f6f6;
 `;
 
-const modalStyle = css`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  background-color: white;
-  box-shadow: 24px;
-  padding: 32px;
-`;
+
+const center = {
+  textAlign: 'center',
+  margin: 'auto',
+  display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%', // Adjust as needed based on your layout
+};
 
 const ReferAndEarnLandingPage = () => {
   const [open, setOpen] = useState(false);
@@ -49,19 +48,19 @@ const ReferAndEarnLandingPage = () => {
   return (
     <Container>
       <div css={heroSection}>
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom style={center}>
           Refer & Earn
         </Typography>
-        <Typography variant="h5" gutterBottom>
+        <Typography variant="h5" gutterBottom style={center}>
           Refer a friend and earn rewards!
         </Typography>
-        <Button variant="contained" color="primary" onClick={handleOpen}>
-          Refer Now
+        <Button variant="contained" color="secondary" onClick={handleOpen} style={center}>
+          Refer Now 
         </Button>
       </div>
       <Modal open={open} onClose={handleClose}>
-        <Box css={modalStyle}>
-          <Typography variant="h6" gutterBottom>
+      <Box sx={{ ...center, width: '80%', maxWidth: 400 }}>
+          <Typography variant="h6" gutterBottom >
             Refer a Course
           </Typography>
           <form onSubmit={handleSubmit}>
